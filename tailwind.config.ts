@@ -26,44 +26,44 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(210, 100%, 50%)", // Bright blue
+          DEFAULT: "#522859", // Pastel purple
           foreground: "hsl(0, 0%, 100%)",
         },
         secondary: {
-          DEFAULT: "hsl(210, 40%, 96%)", // Light blue-gray
-          foreground: "hsl(210, 40%, 20%)",
+          DEFAULT: "#f3f0f4", // Very light purple-gray
+          foreground: "#522859",
         },
         destructive: {
           DEFAULT: "hsl(0, 84.2%, 60.2%)",
           foreground: "hsl(210, 40%, 98%)",
         },
         muted: {
-          DEFAULT: "hsl(210, 40%, 96%)",
-          foreground: "hsl(215, 16%, 47%)",
+          DEFAULT: "#f8f6f9", // Light purple-gray
+          foreground: "#6b4c75",
         },
         accent: {
-          DEFAULT: "hsl(210, 40%, 94%)",
-          foreground: "hsl(210, 40%, 20%)",
+          DEFAULT: "#f0ecf2", // Light purple accent
+          foreground: "#522859",
         },
         popover: {
           DEFAULT: "hsl(0, 0%, 100%)",
-          foreground: "hsl(210, 40%, 4%)",
+          foreground: "#522859",
         },
         card: {
           DEFAULT: "hsl(0, 0%, 100%)",
-          foreground: "hsl(210, 40%, 4%)",
+          foreground: "#522859",
         },
-        // Custom blue palette
-        "blue-50": "#eff6ff",
-        "blue-100": "#dbeafe",
-        "blue-200": "#bfdbfe",
-        "blue-300": "#93c5fd",
-        "blue-400": "#60a5fa",
-        "blue-500": "#3b82f6",
-        "blue-600": "#2563eb",
-        "blue-700": "#1d4ed8",
-        "blue-800": "#1e40af",
-        "blue-900": "#1e3a8a",
+        // Custom purple palette
+        "purple-50": "#faf9fb",
+        "purple-100": "#f3f0f4",
+        "purple-200": "#e8e1ec",
+        "purple-300": "#d4c4db",
+        "purple-400": "#b899c4",
+        "purple-500": "#9b6eab",
+        "purple-600": "#7d4a8a",
+        "purple-700": "#6b4c75",
+        "purple-800": "#522859",
+        "purple-900": "#3d1e42",
       },
       borderRadius: {
         lg: "var(--radius)",

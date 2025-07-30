@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Soile NeuroDraw Mirror',
-  description: 'Created by SOILE',
+  title: 'Sana',
+  description: 'Created by SANA',
 }
 
 export default function RootLayout({

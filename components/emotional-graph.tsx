@@ -36,11 +36,11 @@ export function EmotionalGraph({ data }: EmotionalGraphProps) {
     ctx.clearRect(0, 0, rect.width, rect.height)
 
     // Draw background
-    ctx.fillStyle = "#f8fafc"
+    ctx.fillStyle = "#faf9fb"
     ctx.fillRect(0, 0, rect.width, rect.height)
 
     // Draw grid
-    ctx.strokeStyle = "#e2e8f0"
+    ctx.strokeStyle = "#e8e1ec"
     ctx.lineWidth = 1
 
     // Vertical grid lines
@@ -93,28 +93,28 @@ export function EmotionalGraph({ data }: EmotionalGraphProps) {
         }
       }
 
-      // Draw calmness line (blue)
+      // Draw calmness line (purple)
       drawLine(
         data.map((d) => d.calmness),
-        "#3b82f6",
+        "#9b6eab",
         2,
-        "rgba(59, 130, 246, 0.1)",
+        "rgba(155, 110, 171, 0.1)",
       )
 
-      // Draw energy line (orange)
+      // Draw energy line (darker purple)
       drawLine(
         data.map((d) => d.energy),
-        "#f97316",
+        "#7d4a8a",
         2,
-        "rgba(249, 115, 22, 0.1)",
+        "rgba(125, 74, 138, 0.1)",
       )
 
-      // Draw focus line (green)
+      // Draw focus line (light purple)
       drawLine(
         data.map((d) => d.focus),
-        "#10b981",
+        "#b899c4",
         2,
-        "rgba(16, 185, 129, 0.1)",
+        "rgba(184, 153, 196, 0.1)",
       )
 
       // Draw emotion markers
@@ -127,11 +127,11 @@ export function EmotionalGraph({ data }: EmotionalGraphProps) {
 
         // Color based on emotion
         if (point.emotion === "excited") {
-          ctx.fillStyle = "#ef4444" // Red
+          ctx.fillStyle = "#d4c4db" // Light purple
         } else if (point.emotion === "balanced") {
-          ctx.fillStyle = "#8b5cf6" // Purple
+          ctx.fillStyle = "#9b6eab" // Medium purple
         } else {
-          ctx.fillStyle = "#0ea5e9" // Blue
+          ctx.fillStyle = "#522859" // Dark purple
         }
 
         ctx.fill()
@@ -145,22 +145,22 @@ export function EmotionalGraph({ data }: EmotionalGraphProps) {
     const legendY = rect.height - 20
 
     // Calmness
-    ctx.fillStyle = "#3b82f6"
+    ctx.fillStyle = "#9b6eab"
     ctx.fillRect(10, legendY, 15, 10)
-    ctx.fillStyle = "#000000"
+    ctx.fillStyle = "#522859"
     ctx.font = "12px sans-serif"
     ctx.fillText("Спокойствие", 30, legendY + 9)
 
     // Energy
-    ctx.fillStyle = "#f97316"
+    ctx.fillStyle = "#7d4a8a"
     ctx.fillRect(120, legendY, 15, 10)
-    ctx.fillStyle = "#000000"
+    ctx.fillStyle = "#522859"
     ctx.fillText("Энергия", 140, legendY + 9)
 
     // Focus
-    ctx.fillStyle = "#10b981"
+    ctx.fillStyle = "#b899c4"
     ctx.fillRect(210, legendY, 15, 10)
-    ctx.fillStyle = "#000000"
+    ctx.fillStyle = "#522859"
     ctx.fillText("Фокус", 230, legendY + 9)
   }, [data])
 

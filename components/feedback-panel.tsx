@@ -2,7 +2,8 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, Brain } from "lucide-react"
+import { X } from "lucide-react"
+import { SanaLogo } from "@/components/sana-logo"
 
 interface FeedbackPanelProps {
   drawingMetrics: {
@@ -53,76 +54,76 @@ export function FeedbackPanel({ drawingMetrics, onClose }: FeedbackPanelProps) {
   const emotionalState = getEmotionalState()
 
   return (
-    <Card className="relative bg-white/90 backdrop-blur-sm border-blue-200">
+    <Card className="relative bg-white/90 backdrop-blur-sm border-purple-200">
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-2 top-2 text-blue-600 hover:text-blue-800"
+        className="absolute right-2 top-2 text-purple-600 hover:text-purple-800"
         onClick={onClose}
       >
         <X className="h-4 w-4" />
       </Button>
       <CardHeader>
-        <CardTitle className="text-blue-900 flex items-center">
-          <Brain className="h-5 w-5 mr-2" />
+        <CardTitle className="text-purple-800 flex items-center">
+          <SanaLogo size={20} className="mr-2" />
           Анализ твоего рисунка
         </CardTitle>
-        <CardDescription className="text-blue-700">Что говорит твой рисунок о твоем состоянии</CardDescription>
+        <CardDescription className="text-purple-700">Что говорит твой рисунок о твоем состоянии</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <h3 className="font-medium text-blue-900">Твое состояние: {emotionalState.state}</h3>
-          <p className="text-sm text-blue-700 mt-1">{emotionalState.description}</p>
+        <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
+          <h3 className="font-medium text-purple-800">Твое состояние: {emotionalState.state}</h3>
+          <p className="text-sm text-purple-700 mt-1">{emotionalState.description}</p>
         </div>
 
         <div className="space-y-3">
           <div>
-            <div className="flex justify-between text-sm text-blue-800">
+            <div className="flex justify-between text-sm text-purple-700">
               <span>Скорость линий</span>
               <span>{lineSpeed}%</span>
             </div>
-            <div className="h-2 bg-blue-100 rounded-full mt-1">
+            <div className="h-2 bg-purple-100 rounded-full mt-1">
               <div
-                className="h-full bg-blue-500 rounded-full transition-all duration-300"
+                className="h-full bg-purple-500 rounded-full transition-all duration-300"
                 style={{ width: `${lineSpeed}%` }}
               />
             </div>
           </div>
 
           <div>
-            <div className="flex justify-between text-sm text-blue-800">
+            <div className="flex justify-between text-sm text-purple-700">
               <span>Резкость линий</span>
               <span>{lineSharpness}%</span>
             </div>
-            <div className="h-2 bg-blue-100 rounded-full mt-1">
+            <div className="h-2 bg-purple-100 rounded-full mt-1">
               <div
-                className="h-full bg-blue-600 rounded-full transition-all duration-300"
+                className="h-full bg-purple-600 rounded-full transition-all duration-300"
                 style={{ width: `${lineSharpness}%` }}
               />
             </div>
           </div>
 
           <div>
-            <div className="flex justify-between text-sm text-blue-800">
+            <div className="flex justify-between text-sm text-purple-700">
               <span>Интенсивность цвета</span>
               <span>{colorIntensity}%</span>
             </div>
-            <div className="h-2 bg-blue-100 rounded-full mt-1">
+            <div className="h-2 bg-purple-100 rounded-full mt-1">
               <div
-                className="h-full bg-blue-400 rounded-full transition-all duration-300"
+                className="h-full bg-purple-400 rounded-full transition-all duration-300"
                 style={{ width: `${colorIntensity}%` }}
               />
             </div>
           </div>
 
           <div>
-            <div className="flex justify-between text-sm text-blue-800">
+            <div className="flex justify-between text-sm text-purple-700">
               <span>Повторяемость паттернов</span>
               <span>{patternRepetition}%</span>
             </div>
-            <div className="h-2 bg-blue-100 rounded-full mt-1">
+            <div className="h-2 bg-purple-100 rounded-full mt-1">
               <div
-                className="h-full bg-blue-700 rounded-full transition-all duration-300"
+                className="h-full bg-purple-700 rounded-full transition-all duration-300"
                 style={{ width: `${patternRepetition}%` }}
               />
             </div>
