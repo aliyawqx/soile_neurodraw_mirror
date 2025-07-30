@@ -10,7 +10,7 @@ interface SanaLogoProps {
 export function SanaLogo({ size = 32, className = "" }: SanaLogoProps) {
   return (
     <Image
-      src="/images/sana-logo.jpg"
+      src="/sana-logo.jpg"
       alt="Sana Logo"
       width={size}
       height={size}
